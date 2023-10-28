@@ -3,12 +3,12 @@
 
 #pragma once
 
-#include "pmp/SurfaceMesh.h"
+#include "pmp/surface_mesh.h"
 #include "pmp/algorithms/Heap.h"
 #include "pmp/algorithms/NormalCone.h"
 #include "pmp/algorithms/Quadric.h"
 
-#include "lib_platform/Globals.h"
+#include "pmp/Globals.h"
 
 #include <set>
 #include <vector>

@@ -6,8 +6,9 @@
 #include <limits>
 #include <set>
 #include <vector>
+#include <map>
 
-#include "pmp/SurfaceMesh.h"
+#include "pmp/surface_mesh.h"
 
 namespace pmp {
 

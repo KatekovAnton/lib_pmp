@@ -3,9 +3,9 @@
 
 #pragma once
 
-#include "pmp/SurfaceMesh.h"
+#include "pmp/surface_mesh.h"
 
-#include "lib_platform/Globals.h"
+#include "pmp/Globals.h"
 
 #include <vector>
 

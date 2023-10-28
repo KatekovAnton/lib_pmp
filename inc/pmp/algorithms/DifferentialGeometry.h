@@ -3,8 +3,8 @@
 
 #pragma once
 
-#include "pmp/Types.h"
-#include "pmp/SurfaceMesh.h"
+#include "pmp/types.h"
+#include "pmp/surface_mesh.h"
 
 namespace pmp {
 
@@ -25,57 +25,11 @@ inline double clamp_cos(const double v)
     return (v < -bound ? -bound : (v > bound ? bound : v));
 }
 
-//! compute angle between two (un-normalized) vectors
-inline Scalar angle(const Point& v0, const Point& v1)
-{
-    return atan2(norm(cross(v0, v1)), dot(v0, v1));
-}
-
-//! compute sine of angle between two (un-normalized) vectors
-inline Scalar sin(const Point& v0, const Point& v1)
-{
-    return norm(cross(v0, v1)) / (norm(v0) * norm(v1));
-}
-
-//! compute cosine of angle between two (un-normalized) vectors
-inline Scalar cos(const Point& v0, const Point& v1)
-{
-    return dot(v0, v1) / (norm(v0) * norm(v1));
-}
-
-//! compute cotangent of angle between two (un-normalized) vectors
-inline Scalar cotan(const Point& v0, const Point& v1)
-{
-    return Scalar(clamp_cot(double(dot(v0, v1))) / double(norm(cross(v0, v1))));
-}
-
-//! compute area of a triangle given by three points
-Scalar triangle_area(const Point& p0, const Point& p1, const Point& p2);
-
 //! compute area of triangle f
 Scalar triangle_area(const SurfaceMesh& mesh, Face f);
 
-//! surface area of the mesh (assumes triangular faces)
-Scalar surface_area(const SurfaceMesh& mesh);
-
-//! barycenter/centroid of a face
-Point centroid(const SurfaceMesh& mesh, Face f);
-
-//! barycenter/centroid of mesh, computed as area-weighted mean of vertices.
-//! assumes triangular faces.
-Point centroid(const SurfaceMesh& mesh);
-
-//! compute the cotangent weight for edge e
-double cotan_weight(const SurfaceMesh& mesh, Edge e);
-
-//! compute (mixed) Voronoi area of vertex v
-double voronoi_area(const SurfaceMesh& mesh, Vertex v);
-
 //! compute barycentric Voronoi area of vertex v
 double voronoi_area_barycentric(const SurfaceMesh& mesh, Vertex v);
-
-//! compute Laplace vector for vertex v (normalized by Voronoi area)
-Point laplace(const SurfaceMesh& mesh, Vertex v);
 
 //! compute the sum of angles around vertex v (used for Gaussian curvature)
 Scalar angle_sum(const SurfaceMesh& mesh, Vertex v);

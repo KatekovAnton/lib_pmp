@@ -7,6 +7,7 @@
 #include "Eigen/Sparse"
 
 #include "pmp/algorithms/DifferentialGeometry.h"
+#include "pmp/algorithms/differential_geometry.h"
 
 namespace pmp {
 

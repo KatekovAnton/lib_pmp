@@ -3,7 +3,7 @@
 
 #pragma once
 
-#include "pmp/Types.h"
+#include "pmp/types.h"
 
 #include <cmath>
 

@@ -5,8 +5,8 @@
 
 #include <limits>
 
-#include "pmp/algorithms/DistancePointTriangle.h"
-#include "pmp/BoundingBox.h"
+#include "pmp/algorithms/distance_point_triangle.h"
+#include "pmp/bounding_box.h"
 
 namespace pmp {
 

@@ -6,7 +6,7 @@
 #include <iterator>
 #include <limits>
 
-#include "pmp/algorithms/DistancePointTriangle.h"
+#include "pmp/algorithms/distance_point_triangle.h"
 #include "pmp/algorithms/SurfaceNormals.h"
 
 #ifndef M_PI

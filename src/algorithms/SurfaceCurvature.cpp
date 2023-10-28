@@ -4,6 +4,7 @@
 #include "pmp/algorithms/SurfaceCurvature.h"
 #include "pmp/algorithms/SurfaceNormals.h"
 #include "pmp/algorithms/DifferentialGeometry.h"
+#include "pmp/algorithms/differential_geometry.h"
 
 #ifndef M_PI
 #define M_PI 3.141592653589793238
